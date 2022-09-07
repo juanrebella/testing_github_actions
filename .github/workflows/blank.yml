@@ -24,6 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag nacho:$(date +%s) 
-           docker run nacho:$(date +%s)
-           curl localhost:80
+      run: 
+           - docker build . --file Dockerfile --tag nacho:$(date +%s) 
+           - docker run nacho:$(date +%s)
+           - curl localhost:80
