@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu:latest
       services:
-        postgre:
+        postgres:
           image: postgres
           env:
             POSTGRESPASSWORD: postgres
