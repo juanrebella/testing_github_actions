@@ -1,0 +1,16 @@
+name: postgres
+
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu:latest
+      services:
+        postgre:
+          image: postgres
+          env:
+            POSTGRESPASSWORD: postgres
+          ports:
+            - 5432:5432
+          volumes:
+              - .:.
+           
